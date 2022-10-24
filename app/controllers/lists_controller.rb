@@ -1,4 +1,5 @@
 class ListsController < ApplicationController
+
   def index
     @lists = List.all
   end
@@ -18,6 +19,10 @@ class ListsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @list = List.find(params[:id])
   end
 
   private
