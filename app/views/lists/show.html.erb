@@ -3,15 +3,15 @@
 </div>
 
 <div class="list-index-content">
-  <% @list.movies.each do |movie| %>
+  <% @list.bookmarks.each do |bookmark| %>
     <div class="list-card-index">
     <%= image_tag 'list-image', class: 'image-list-cover', alt: 'image cover for list' %>
       <div class="list-card-content">
-      <p><%= movie.title %></p>
+      <p><%= bookmark.movie.title %><br></p>
+       <%# <p> <%= bookmark.comment </p> %>
       </div>
     </div>
 
-     <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
    <% end %>
   </div>
 
