@@ -5,7 +5,7 @@
 <div class="list-index-content">
   <% @list.bookmarks.each do |bookmark| %>
     <div class="list-card-index">
-    <%= image_tag 'list-image', class: 'image-list-cover', alt: 'image cover for list' %>
+    <%= cl_image_tag('cld-sample-5') %>
       <div class="list-card-content">
       <p><%= bookmark.movie.title %><br></p>
        <%# <p> <%= bookmark.comment </p> %>
